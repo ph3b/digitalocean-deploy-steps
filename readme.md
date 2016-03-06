@@ -2,17 +2,17 @@
 ## 1 Set up SSH
 If you don't have generated keys use:
 
-```ssh-keygen -t rsa -C "my@email.com"```
+```$ ssh-keygen -t rsa -C "my@email.com"```
 Make a password or not. After, get the public key with
-```cat ~/.ssh/id_rsa.pub```
-You can now SSH into the box with ```ssh root@ip```
+```$ cat ~/.ssh/id_rsa.pub```
+You can now SSH into the box with ```$ ssh root@ip```
 
 ## 2 Install dependencies
-Install Git with ```sudo apt-get install git```
+Install Git with ```$ sudo apt-get install git```
 
-Install MySQL with ```sudo apt-get install mysql-server```
+Install MySQL with ```$ sudo apt-get install mysql-server```
 
-Install Nginx with ```sudo apt-get install nginx```
+Install Nginx with ```$ sudo apt-get install nginx```
 
 
 ## 3 Install Node.JS
@@ -20,14 +20,16 @@ See: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-lin
 
 For stable LTS
 ```
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install -y nodejs
+$ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
 ```
 After this NPM is available and we can git pull our repo and run server
 with pm2 or forever.
 
 ## Set up reverse proxy with Nginx
-Standard config file:
+Standard config:
+
+Edit this ```$ sudo vi /etc/nginx/sites-available/default```
 ```
 server {
     listen 80;
@@ -44,3 +46,5 @@ server {
     }
 }
 ```
+Where 127.0.0.1 and 8080 is the private ip and port of the Node app.
+Then restart Nginx with ```$ sudo service nginx restart```
