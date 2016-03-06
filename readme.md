@@ -26,7 +26,7 @@ $ sudo apt-get install -y nodejs
 After this NPM is available and we can git pull our repo and run server
 with pm2 or forever.
 
-## Set up reverse proxy with Nginx
+## 4 Set up reverse proxy with Nginx
 Standard config:
 
 Edit this ```$ sudo vi /etc/nginx/sites-available/default```
