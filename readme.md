@@ -12,7 +12,7 @@ Install Git with ```sudo apt-get install git```
 
 Install MySQL with ```sudo apt-get install mysql-server```
 
-## Install Node.JS
+## 3 Install Node.JS
 See: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
 For stable LTS
